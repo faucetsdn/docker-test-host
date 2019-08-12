@@ -8,7 +8,7 @@
 # This host is built on top of ubuntu which is the same as the base-test image so should be most stable.
 #
 
-FROM ubuntu:18.04
+FROM ubuntu:19.10
 
 RUN apt-get update && apt-get install -y net-tools iproute2 iputils-ping
 

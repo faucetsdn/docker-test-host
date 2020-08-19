@@ -10,10 +10,13 @@
 
 FROM ubuntu:18.04
 
-RUN apt-get update && apt-get install -y net-tools iproute2 iputils-ping
-
+RUN apt-get update \
+    && apt-get upgrade -y \
+    && apt-get install -y net-tools iproute2 iputils-ping \
 # Add a marker in so that the unit tests can tell this is a container.
-RUN echo faucet-test-host > /root/test_marker.txt
+    && echo faucet-test-host > /root/test_marker.txt \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
 
 # Cmd to run when activated
-CMD echo hello faucet
+CMD echo "hello faucet"

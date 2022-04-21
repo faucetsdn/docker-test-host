@@ -8,7 +8,7 @@
 # This host is built on top of ubuntu which is the same as the base-test image so should be most stable.
 #
 
-FROM ubuntu:20.04
+FROM ubuntu:22.04
 
 RUN apt-get update \
     && apt-get upgrade -y \

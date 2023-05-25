@@ -8,7 +8,7 @@
 # This host is built on top of ubuntu which is the same as the base-test image so should be most stable.
 #
 
-FROM ubuntu:22.04
+FROM debian:bookworm
 
 RUN apt-get update \
     && apt-get upgrade -y \
